@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: Integration_Hackathon_De07
+  ai:
+    openai:
+      base-url: https://openrouter.ai/api/v1
+      api-key: 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
+      chat:
+        model: anthropic/claude-3-haiku
+      embedding:
+        model: text-embedding-3-small
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1536
+        initialize-schema: true
+  datasource:
+    url: jdbc:postgresql://aws-0-ap-southeast-2.pooler.supabase.com:5432/postgres
+    username: postgres.nbicmflzsgqfnvupczgw
+    password: letienduc123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect

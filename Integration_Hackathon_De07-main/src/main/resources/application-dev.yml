@@ -1,0 +1,7 @@
+openai:
+  api-key: ""
+
+database:
+  host: ""
+  username: ""
+  password: ""
